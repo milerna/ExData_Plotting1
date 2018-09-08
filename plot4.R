@@ -23,9 +23,9 @@ lines(data$Time,data$Sub_metering_2,col='Red')
 lines(data$Time,data$Sub_metering_3,col='Blue')
 legend("topright", col=c("black", "red", "blue"), lty=1, lwd=1,
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-
+#no box around legend
 legend("topright", col=c("black", "red", "blue"), lty=1, lwd=1,
-       legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+       legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),bty="n")
 plot(data$Time,data$Global_reactive_power, type="l", xlab = "datetime", ylab = "Global_reactive_power")
 #copy plot to png fle
 dev.copy(png, file="plot4.png", height=480, width=480)
